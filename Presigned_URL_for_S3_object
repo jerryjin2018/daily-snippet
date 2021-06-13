@@ -1,1 +1,23 @@
 
+import boto3
+from botocore.exceptions import ClientError
+
+# Notice
+# Should configure your environment correctly, such as AWS AKSK or Role.
+
+def main():
+
+# "****newtestout" should be your bucket name
+# "t**st/i***.png" is object name(or relative path and object name)
+
+    client = boto3.client('s3')
+    try:
+        response = client.generate_presigned_url('get_object',
+                                                  Params={'Bucket': "****newtestout",'Key': "t**st/i***.png"},
+                                                  ExpiresIn=3600)
+        print(response)
+    except ClientError as e:
+        print(e)
+
+if __name__ == '__main__':
+    main()    

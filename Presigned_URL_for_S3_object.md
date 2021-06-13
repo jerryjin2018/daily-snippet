@@ -38,6 +38,8 @@ https://****newtestout.s3.cn-northwest-1.amazonaws.com.cn/t**st/i***.png?X-Amz-A
 freeip:script host$ aws s3 presign s3://****newtestout/*****logo.png --expires-in 604800
 https://****newtestout.s3.cn-northwest-1.amazonaws.com.cn/*****logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZTGKYWNBM2VCDHDT%2F20210613%2Fcn-northwest-1%2Fs3%2Faws4_request&X-Amz-Date=20210613T151807Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=5182604605743b8617f5c5ac37fb3a9fe617377b9d56c2ee80d960621474460c
 ```
+--expires-in (integer) Number of seconds until the pre-signed URL expires. Default is 3600 seconds, and for 604800 one week.
 
 ### 5. Reference
 [https://boto3.amazonaws.com/v1/documentation/api/1.11.4/guide/s3-presigned-urls.html](https://boto3.amazonaws.com/v1/documentation/api/1.11.4/guide/s3-presigned-urls.html)
+[https://docs.aws.amazon.com/cli/latest/reference/s3/presign.html](https://docs.aws.amazon.com/cli/latest/reference/s3/presign.html)
